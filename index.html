@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Challenge 01 alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="encriptador.js"></script>
+
+    </head>
+    <body>
+        <header>
+            <h1><img src="Logo-1.png" class="logo-alura" alt="LogoAlura"></h1>
+        </header>
+    
+        <main>
+            <section class="seccion1">
+               <textarea id="textoencriptado" cols="30" rows="30" placeholder="Ingresa texto aqui"></textarea>
+
+                <div class="salvedades">
+                    <img src="bi_exclamation-circle-fill.png" class="simbolo" alt="exclamacion">
+
+                    <p class="atencion">Solo letras minusculas y sin acentos</p>
+                </div>
+
+                <div class="botones">
+                    <button type="button" id="botonencriptar">Encriptar</button>
+                    <button type="button" id="botondesencriptar">Desencriptar</button>
+                    
+                </div>
+            </section>
+            <section class="seccion2">
+                <textarea name="resultado" id="textodesencriptado" cols="30" rows="30"></textarea>
+                <button type="button" id="botoncopiar">copiar</button>
+                <div class="vacio" id="vacio">
+                <img src="muneco.png" id="muñeco" alt="muñeco">
+                <h3>No se encontro ningun mensaje</h3>
+                <p class="subtitulo">Ingresa el texto que desea encriptar o desencriptar</p>
+                </div>
+            </section>
+
+        </main>    
+    </body>
+    <footer>
+        <p class="desarrollador">Desarrollado por Gian G</p>
+    </footer>
+    <script>
+        var boton=document.querySelector("#botonencriptar");
+        boton.onclick=encriptar;
+        var boton1=document.querySelector("#botondesencriptar");
+        boton1.onclick=desencriptar;
+        var boton2=document.querySelector("#botoncopiar");
+        boton2.onclick=copiar;
+    </script>
+
+</html>
